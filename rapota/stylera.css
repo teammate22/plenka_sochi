@@ -1,0 +1,949 @@
+@font-face {
+	font-family: Helvetica Neue;
+	src: url(fonts/HelveticaNeueCyr-Roman.woff) format("woff"), url(fonts/HelveticaNeueCyr-Roman.otf) format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: Helvetica Neue;
+	src: url(fonts/HelveticaNeueCyr-Medium.woff) format("woff"), url(fonts/HelveticaNeueCyr-Medium.otf) format("opentype");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: Helvetica Neue;
+	src: url(fonts/HelveticaNeueCyr-Bold.woff) format("woff"), url(fonts/HelveticaNeueCyr-Bold.otf) format("opentype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: Proxima Nova;
+	src: url(fonts/Proxima-Nova-Regular.woff) format("woff"), url(fonts/Proxima-Nova-Regular.otf) format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: Proxima Nova;
+	src: url(fonts/Proxima-Nova-Bold.woff) format("woff"), url(fonts/Proxima-Nova-Bold.otf) format("opentype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: Proxima Nova;
+	src: url(fonts/Proxima-Nova-Extrabold.woff) format("woff"), url(fonts/Proxima-Nova-Extrabold.otf) format("opentype");
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: Proxima Nova;
+	src: url(fonts/Proxima-Nova-Semibold.woff) format("woff"), url(fonts/Proxima-Nova-Semibold.otf) format("opentype");
+	font-weight: 600;
+	font-style: normal;
+}
+* {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none;
+}
+* {
+	box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+*::before {
+	box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+*::after {
+	box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.l {
+	text-align: left;
+}
+.c {
+	text-align: center;
+}
+.r {
+	text-align: right;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.cl {
+	clear: left;
+}
+.cr {
+	clear: right;
+}
+.db {
+	display: block;
+}
+.dib {
+	display: inline-block;
+}
+.dn {
+	display: none;
+}
+.ttu {
+	text-transform: uppercase;
+}
+.b {
+	font-weight: bold;
+}
+.n {
+	font-weight: normal;
+}
+.i {
+	font-style: italic;
+}
+.nbsp {
+	white-space: nowrap;
+}
+ul {
+	list-style: none;
+}
+ul.bullet {
+	list-style-type: disc;
+}
+.modal-text ul {
+	list-style-type: disc;
+}
+ul.bullet {
+	list-style-position: inside;
+}
+.modal-text ul {
+	list-style-position: inside;
+}
+ol {
+	list-style-position: inside;
+}
+a {
+	color: inherit; text-decoration: none;
+}
+a.phone {
+	text-decoration: none; white-space: nowrap; cursor: default;
+}
+.clearfix::before {
+	clear: both; display: table; content: "";
+}
+.clearfix::after {
+	clear: both; display: table; content: "";
+}
+.korab::before {
+	clear: both; display: table; content: "";
+}
+.korab::after {
+	clear: both; display: table; content: "";
+}
+section::before {
+	clear: both; display: table; content: "";
+}
+section::after {
+	clear: both; display: table; content: "";
+}
+header::after {
+	clear: both; display: table; content: "";
+}
+footer::before {
+	clear: both; display: table; content: "";
+}
+body {
+	background: rgb(255, 255, 255); font: 14px/1.2 "Helvetica Neue", Arial, Helvetica, sans-serif; margin: 0px auto; color: rgb(65, 65, 65); min-width: 976px; max-width: 1366px; font-size-adjust: none; font-stretch: normal; box-shadow: 0px 0px 20px #aaa; -webkit-box-shadow: 0 0 20px #aaa;
+}
+.obereg {
+	font-family: "Proxima Nova", Arial, Helvetica, sans-serif; font-weight: 800;
+}
+h1 {
+	font-family: "Proxima Nova", Arial, Helvetica, sans-serif; font-weight: 800;
+}
+h2 {
+	font-family: "Proxima Nova", Arial, Helvetica, sans-serif; font-weight: 800;
+	color: #339999;
+}
+h3 {
+	font-family: "Proxima Nova", Arial, Helvetica, sans-serif; font-weight: 800;
+}
+header .callback {
+	font-family: "Proxima Nova", Arial, Helvetica, sans-serif; font-weight: 800;
+}
+#selection .price {
+	font-family: "Proxima Nova", Arial, Helvetica, sans-serif; font-weight: 800;
+}
+#creation .steps-nav {
+	font-family: "Proxima Nova", Arial, Helvetica, sans-serif; font-weight: 800;
+}
+#opishem li span {
+	font-family: "Proxima Nova", Arial, Helvetica, sans-serif; font-weight: 800;
+}
+button {
+	font-family: "Proxima Nova", Arial, Helvetica, sans-serif; font-weight: 800;
+}
+.button {
+	font-family: "Proxima Nova", Arial, Helvetica, sans-serif; font-weight: 800;
+}
+#total span {
+	font-family: "Proxima Nova", Arial, Helvetica, sans-serif; font-weight: 800;
+}
+#selector h3 {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+h1 {
+	text-transform: uppercase;
+}
+h2 {
+	text-transform: uppercase;
+}
+h3 {
+	text-transform: uppercase;
+}
+.korab {
+	margin: 80px auto; padding: 0px 8px; width: 976px; height: 100%; position: relative;
+}
+.narrow.korab {
+	width: 800px;
+}
+.maxira.korab {
+	width: auto; min-width: 976px; max-width: 1112px;
+}
+#startuem {
+	background: url("../krafki/glavnyi-fon-plenka-sochi.jpg") fixed no-repeat 49% 1px rgb(204, 255, 255); height: 1272px; text-align: center;
+}
+header .korab {
+	max-width: 1200px;
+}
+.obereg {
+	background: url("../krafki/logotip-plenka.png") no-repeat; padding: 2px 0px 0px 80px; text-transform: uppercase; line-height: 18px; font-size: 22px; font-weight: 800; margin-top: 8px; float: left; display: block; min-height: 50px;
+}
+footer .obereg {
+	padding-left: 60px; background-image: url("../krafki/ralogo-alt.png");
+}
+.obereg span {
+	font-size: 16px; font-weight: 600; display: block;
+}
+.obereg .year {
+	font-size: 18px; font-weight: normal; margin-top: 4px;
+}
+.obereg img {
+	width: 50px; height: 40px; margin-right: 20px; float: left; display: block;
+}
+header .opishem {
+	left: 554px;
+	top: 3px;
+	width: 372px;
+	text-align: center;
+	font-size: 18px;
+	margin-left: -114px;
+	position: absolute;
+	height: 54px;
+	font-weight: bold;
+}
+header .opishem p {
+	text-transform: uppercase; font-size: 12px;
+}
+header .opishem .address {
+	background: url("../krafki/navigation-plenka-sochi.png") no-repeat 0px 50%; text-align: left; padding-left: 20px; min-height: 16px;
+}
+header .callback {
+	text-align: right; font-size: 18px; font-weight: 600; float: right;
+}
+header .callback .modal-trigger {
+	top: -3px; text-transform: uppercase; font-size: 14px; border-bottom-color: rgba(65, 65, 65, 0.2); border-bottom-width: 1px; border-bottom-style: solid; position: relative;
+}
+header .callback .modal-trigger:hover {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+header .callback :nth-of-type(1).phone span {
+	letter-spacing: 0.1px;
+}
+header .callback :nth-of-type(2).phone span {
+	letter-spacing: 1.75px;
+}
+h1 {
+	text-align: center; color: rgb(51, 64, 73); line-height: 1; font-size: 115px;
+}
+h1 + p {
+	font-size: 24px; font-weight: 500;
+}
+h1 + p span {
+	font-size: 30px; font-weight: bold;
+	color: rgb(0, 60, 255);
+}
+#selector {
+	background: url("../krafki/rabg-selector.png") no-repeat; margin: 270px auto 0px; width: 590px; height: 300px; overflow: hidden;
+}
+#selector h3 {
+	margin: 24px 0px 28px; text-transform: none; font-size: 20px; font-weight: normal;
+}
+.radio input {
+	display: none;
+}
+.radio label {
+	margin: 0px 32px; padding-left: 28px; font-size: 16px; display: inline-block; position: relative; cursor: pointer;
+}
+.radio label::before {
+	border-radius: 50%; display: block; position: absolute; content: ""; -webkit-border-radius: 50%;
+}
+.radio label::after {
+	border-radius: 50%; display: block; position: absolute; content: ""; -webkit-border-radius: 50%;
+}
+.radio label::before {
+	background: rgb(255, 255, 255); border: 1px solid rgb(139, 139, 139); border-image: none; left: 0px; top: 0px; width: 16px; height: 16px;
+}
+.radio input:checked + label::after {
+	background: rgb(70, 70, 70); left: 4px; top: 4px; width: 8px; height: 8px;
+}
+.rangeslider {
+	margin: 60px auto 42px; width: 320px; position: relative;
+}
+.rangeslider::after {
+	top: 50%; right: -24px; font-size: 16px; margin-top: -10px; position: absolute; content: "KG";
+}
+.ui-widget-content {
+	background: rgb(215, 215, 215); border-radius: 5px; box-shadow: inset 0px 2px 3px rgba(0,0,0,0.5); -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset; -webkit-border-radius: 5px;
+}
+.ui-slider {
+	height: 10px;
+}
+.ui-slider-range {
+	background: rgb(76, 165, 220); height: 12px; display: block; position: absolute; z-index: 1;
+}
+.ui-slider-handle {
+	background: url("../krafki/girja-ves-plenki.png") no-repeat; margin: -8px 0px 0px -15px; width: 29px; height: 26px; position: absolute; z-index: 2; cursor: pointer;
+}
+.ui-slider-handle:hover {
+	background-position: 0px -26px;
+}
+.rangeslider .min {
+	top: -30px; font-size: 12px; position: absolute;
+}
+.rangeslider .max {
+	top: -30px; font-size: 12px; position: absolute;
+}
+.rangeslider .min {
+	left: 4px;
+}
+.rangeslider .max {
+	right: -4px;
+}
+.rangeslider .min::before {
+	background: rgb(51, 64, 73); width: 1px; height: 10px; bottom: -11px; display: block; position: absolute; content: "";
+}
+.rangeslider .max::before {
+	background: rgb(51, 64, 73); width: 1px; height: 10px; bottom: -11px; display: block; position: absolute; content: "";
+}
+.ui-slider::before {
+	background: rgb(51, 64, 73); width: 1px; height: 10px; bottom: -11px; display: block; position: absolute; content: "";
+}
+.rangeslider .min::before {
+	left: 3px;
+}
+.rangeslider .max::before {
+	right: 11px;
+}
+.ui-slider::before {
+	left: 50%;
+}
+.ui-slider .current {
+	left: -4px; width: 40px; text-align: center; bottom: -19px; font-size: 14px; position: absolute;
+}
+h2 {
+	text-align: center; font-size: 40px;
+}
+h2 {
+	margin: 40px 0px;
+}
+#reasons li {
+	margin: 40px 0px 100px; width: 22%; text-align: center; font-size: 18px; float: left;
+}
+#reasons li:not(:last-child) {
+	margin-right: 4%;
+}
+#reasons li::before {
+	background: url("../krafki/rans.png"); margin: 0px auto; width: 100px; height: 100px; display: block; content: "";
+}
+#reasons li:nth-child(2)::before {
+	background-position: -100px 0px;
+}
+#reasons li:nth-child(3)::before {
+	background-position: -200px 0px;
+}
+#reasons li:nth-child(4)::before {
+	background-position: -300px 0px;
+}
+#selection {
+	background: rgb(242, 242, 242);
+}
+#selection li {
+	margin: 40px 0px 100px; width: 21%; float: left;
+}
+#selection li:not(:last-child) {
+	margin-right: 4%;
+}
+#selection img {
+	margin: 0px auto 10px; width: 200px; height: 150px; display: block;
+}
+#selection h3 {
+	font-size: 18px; max-width: 90%;
+}
+#selection .size {
+	margin: 12px 0px;
+}
+#selection p {
+	min-height: 104px;
+}
+#selection .price {
+	margin: 6px 0px 16px; height: 56px; font-size: 15px; font-weight: 800; position: relative;
+}
+#selection .price del {
+	left: 0px; top: 0px; text-decoration: none; position: absolute;
+}
+#selection .price del::after {
+	background: #33cccc; left: -2%; top: 40%; width: 104%; height: 3px; display: block; position: absolute; content: ""; transform: rotate(-3deg); -webkit-transform: rotate(-3deg);
+}
+#selection .price .new {
+	left: 0px; bottom: 0px; margin-top: 4px; position: absolute;
+}
+#selection .price span {
+	font-size: 20px;
+}
+#comparision {
+	background: rgb(242, 242, 242);
+}
+#comparision table {
+	margin: 80px auto; width: 820px; text-align: left; font-size: 15px; border-collapse: collapse; table-layout: fixed;
+}
+#comparision th {
+	padding: 8px 16px; border: 1px solid rgb(194, 197, 200); border-image: none; height: 80px; vertical-align: middle;
+}
+#comparision td {
+	padding: 8px 16px; border: 1px solid rgb(194, 197, 200); border-image: none; height: 80px; vertical-align: middle;
+}
+#comparision th {
+	height: 90px; font-weight: normal; border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+#comparision th:first-child {
+	background: rgb(51, 64, 73); color: rgb(255, 255, 255);
+}
+#comparision tr *:first-child {
+	border-left-color: currentColor; border-left-width: medium; border-left-style: none;
+}
+#comparision tr *:last-child {
+	border-right-color: currentColor; border-right-width: medium; border-right-style: none; background-color: rgb(220, 225, 232);
+}
+#comparision tbody tr:last-child td {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+#comparision .minus {
+	background: url("../krafki/no-plenka-sochi.png") no-repeat 50% 50%;
+}
+#comparision .plus {
+	background: url("../krafki/ok-plenka-sochi.png") no-repeat 50% 50%;
+}
+#calc {
+	background: url("../krafki/sklad-plenka-sochi.jpg") no-repeat 50% 0px rgb(106, 86, 58); height: 612px; color: rgb(255, 255, 255);
+}
+#calc .korab {
+	background: rgba(51, 64, 73, 0.8); width: 510px; color: rgb(255, 255, 255);
+}
+#calc h2 {
+	margin: 50px 0px 30px; text-transform: none; font-size: 26px; font-weight: bold;
+}
+#calculator form {
+	margin: 0px auto; width: 282px;
+}
+#calculator .radio {
+	width: 100%; display: block;
+}
+#calculator .select {
+	width: 100%; display: block;
+}
+#calculator .radio {
+	margin-bottom: 30px;
+}
+#calculator form > label {
+	margin: 20px 0px;
+}
+#calculator .radio label {
+	margin: 0px; width: 50%; padding-left: 20px; font-size: 15px; float: left;
+}
+#calculator .radio label::before {
+	top: 3px; width: 14px; height: 14px; box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1); -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1) inset;
+}
+#calculator .radio label::after {
+	left: 4px; top: 7px; width: 6px; height: 6px;
+}
+#calculator label {
+	border-radius: 4px; overflow: hidden; -webkit-border-radius: 4px;
+}
+#calculator label span {
+	float: left;
+}
+#calculator input {
+	margin: 0px; padding: 0px 6px; border-radius: 4px; width: 166px; height: 28px; line-height: 28px; font-size: 16px; float: right; -webkit-border-radius: 4px;
+}
+#calculator select {
+	margin: 0px; padding: 0px 6px; border-radius: 4px; width: 166px; height: 28px; line-height: 28px; font-size: 16px; float: right; -webkit-border-radius: 4px;
+}
+#calculator .note {
+	width: 166px; font-size: 12px; margin-bottom: 30px; float: right; opacity: 0.8;
+}
+#calculator .total {
+	margin: 0px auto; width: 350px; text-align: center; overflow: hidden; padding-top: 28px; font-size: 20px; border-top-color: rgba(255, 255, 255, 0.4); border-top-width: 1px; border-top-style: solid; display: none;
+}
+#calculator .total h4 {
+	font-weight: normal;
+}
+#total span {
+	font-size: 48px; display: block;
+}
+#calculator .total .button {
+	border-width: 3px; width: 230px; font-size: 18px; margin-top: 30px;
+}
+.promo {
+	background: url("../krafki/skidka-tonna.jpg") no-repeat 50% 0px rgb(215, 212, 209); height: 640px;
+}
+.alt.promo {
+	background: url("../krafki/skidka-korobki.jpg") no-repeat 50% 0px rgb(118, 105, 97); color: rgb(255, 255, 255);
+}
+.promo h2 {
+	width: 420px; text-align: left; text-transform: none; line-height: 42px; font-size: 34px; font-weight: bold; margin-top: 250px; float: left; position: relative;
+}
+.promo h2::after {
+	background: url("../krafki/skidka-plenka-sochi.png") no-repeat; width: 131px; height: 27px; right: -70px; bottom: -56px; display: block; position: absolute; content: "";
+}
+.alt.promo h2::after {
+	background-position: 0px -27px;
+}
+.promo h2 span {
+	font-size: 40px; font-weight: 800;
+}
+.promo .form {
+	margin-top: 120px; float: right;
+}
+#layers {
+	background: url("../krafki/rabg-layers.jpg") no-repeat 50% 200px rgb(242, 242, 242); height: 1000px;
+}
+#layers h2 {
+	height: 72px; text-align: left; text-transform: none; font-size: 30px;
+}
+#creation h2 {
+	height: 72px; text-align: left; text-transform: none; font-size: 30px;
+}
+#layers ul {
+	width: 380px; font-size: 20px; margin-top: 180px; position: relative;
+}
+#layers li {
+	left: 0px; position: absolute;
+}
+#layers li:nth-child(1) {
+	top: 0px;
+}
+#layers li:nth-child(2) {
+	top: 110px;
+}
+#layers li:nth-child(3) {
+	top: 250px;
+}
+#layers li:nth-child(4) {
+	top: 360px;
+}
+#layers li:nth-child(5) {
+	top: 470px;
+}
+#creation {
+	background: url("../krafki/rabg-creation.jpg") no-repeat 50% 0px rgb(242, 242, 242); height: 582px; overflow: hidden;
+}
+#creation .description {
+	width: 420px; float: right;
+}
+#creation h2 {
+	margin: 30px 0px 0px; height: auto;
+}
+#creation p {
+	margin: 20px 0px 30px; font-size: 20px;
+}
+#creation .steps-nav a {
+	background: url("../krafki/rasteps-nav.png") no-repeat; width: 49px; height: 42px; text-align: center; color: rgb(255, 255, 255); line-height: 42px; padding-left: 6px; font-size: 30px; font-weight: 800; display: block; position: absolute; cursor: pointer;
+}
+#creation .steps-nav a:nth-child(1) {
+	left: 0px;
+}
+#creation .steps-nav a:nth-child(2) {
+	left: 136px; top: 84px;
+}
+#creation .steps-nav a:nth-child(3) {
+	left: 170px; top: 172px;
+}
+#creation .steps-nav a:nth-child(4) {
+	left: 276px; top: 224px;
+}
+#creation .steps-nav a:nth-child(5) {
+	left: 336px; top: 266px;
+}
+#creation .steps-nav .active {
+	background-position: 0px -42px;
+}
+#creation ol {
+	list-style: none; position: relative; counter-reset: li;
+}
+#creation li {
+	background: rgb(89, 100, 107); padding: 30px 0px 36px 44px; border-radius: 6px 0px 0px 6px; transition:0.3s; top: 0px; right: 0px; color: rgb(255, 255, 255); font-size: 20px; position: absolute; opacity: 0; -webkit-border-radius: 6px 0 0 6px; -webkit-transition: .3s;
+}
+#creation li.active {
+	opacity: 1;
+}
+#creation li::before {
+	margin: 0px 0px 12px 140px; border-radius: 50%; border: 2px solid rgb(255, 255, 255); border-image: none; width: 40px; height: 40px; text-align: center; font-size: 30px; font-weight: 800; display: block; position: relative; content: counter(li, decimal); counter-increment: li; -webkit-border-radius: 50%;
+}
+#creation li::after {
+	background: rgb(89, 100, 107); left: 100%; top: 0px; width: 300px; height: 100%; display: block; position: absolute; content: "";
+}
+.order {
+	background: rgb(242, 242, 242); padding: 60px 0px; text-align: center;
+}
+.order h2 {
+	margin: 0px; text-transform: none; font-size: 30px;
+}
+.form {
+	background: rgba(51, 64, 73, 0.9); width: 440px; height: 400px; text-align: center; color: rgb(255, 255, 255); overflow: hidden;
+}
+.modal-form .form {
+	background: rgb(51, 64, 73);
+}
+.form h3 {
+	margin: 54px 0px 36px; text-transform: none; line-height: 36px; font-size: 20px; font-weight: normal;
+}
+.form p {
+	line-height: 24px; font-size: 12px; font-weight: normal;
+}
+input {
+	background: #FFF; margin: 30px auto; padding: 0px 8px; border-radius: 5px; border: 2px solid #99F; border-image: none; width: 230px; height: 40px; color: rgb(153, 153, 153); font-family: inherit; font-size: 16px; display: block; box-shadow: none; -webkit-box-shadow: none; -webkit-border-radius: 5px;
+}
+select {
+	background: #CCC; margin: 30px auto; padding: 0px 8px; border-radius: 5px; border: 2px solid #99F; border-image: none; width: 230px; height: 40px; color: rgb(153, 153, 153); font-family: inherit; font-size: 16px; display: block; box-shadow: none; -webkit-box-shadow: none; -webkit-border-radius: 5px;
+}
+label {
+	font-size: 16px;
+}
+label.select {
+	margin: 0px auto; width: 344px; overflow: hidden; display: block; position: relative;
+}
+label.select::after {
+	display: block; position: absolute; content: ""; pointer-events: none;
+}
+label.select::after {
+	background: url("../krafki/raselect.png") no-repeat 70% 50% rgb(255, 255, 255); border-radius: 2px; top: 2px; width: 24px; height: 24px; right: 2px; z-index: 2; -webkit-border-radius: 2px;
+}
+input:focus {
+	border-color: #33cccc; color: rgb(51, 51, 51);
+}
+select:focus {
+	border-color: #33cccc; color: rgb(51, 51, 51);
+}
+button {
+	background: #33cccc; padding: 0px 42px; border-radius: 6px; height: 43px; text-align: center; color: rgb(255, 255, 255); text-transform: uppercase; font-family: inherit; font-size: 16px; font-weight: bold; border-bottom-color: rgba(0, 0, 0, 0.2); border-bottom-width: 2px; border-bottom-style: solid; cursor: pointer; -webkit-border-radius: 6px;
+}
+.button {
+	background: #33cccc; padding: 0px 42px; border-radius: 6px; height: 43px; text-align: center; color: rgb(255, 255, 255); text-transform: uppercase; font-family: inherit; font-size: 16px; font-weight: bold; border-bottom-color: rgba(0, 0, 0, 0.2); border-bottom-width: 2px; border-bottom-style: solid; cursor: pointer; -webkit-border-radius: 6px;
+}
+.button {
+	line-height: 41px; text-decoration: none; display: inline-block;
+}
+button {
+	border-width: 2px; margin: 30px auto; padding: 0px 10px; display: block; min-width: 230px;
+}
+button:hover {
+	background: #339999;
+}
+.button:hover {
+	background: #339999;
+}
+button:active {
+	top: 1px; position: relative;
+}
+.button:active {
+	top: 1px; position: relative;
+}
+
+butpra {
+	background: #33cccc; padding: 0px 82px; border-radius: 12px; height: 83px; text-align: center; color: rgb(255, 255, 255); text-transform: uppercase; font-family: inherit; font-size: 32px; font-weight: bold; border-bottom-color: rgba(0, 0, 0, 0.2); border-bottom-width: 4px; border-bottom-style: solid; cursor: pointer; -webkit-border-radius: 12px;
+}
+.butpra {
+	background: #33cccc; padding: 0px 82px; border-radius: 12px; height: 83px; text-align: center; color: rgb(255, 255, 255); text-transform: uppercase; font-family: inherit; font-size: 32px; font-weight: bold; border-bottom-color: rgba(0, 0, 0, 0.2); border-bottom-width: 4px; border-bottom-style: solid; cursor: pointer; -webkit-border-radius: 12px;
+}
+.butpra {
+	line-height: 81px; text-decoration: none; display: inline-block;
+}
+butpra {
+	border-width: 2px; margin: 30px auto; padding: 0px 10px; display: block; min-width: 430px;
+}
+butpra:hover {
+	background: #339999;
+}
+.butpra:hover {
+	background: #339999;
+}
+butpra:active {
+	top: 1px; position: relative;
+}
+.butpra:active {
+	top: 1px; position: relative;
+}
+
+.order .button {
+	border: currentColor; border-image: none; width: 230px; height: 40px; line-height: 40px; margin-top: 30px;
+}
+#calculate {
+	margin: 20px 0px 14px; padding: 0px; border-radius: 4px; width: 166px; height: 28px; line-height: 28px; font-size: 14px; font-weight: normal; float: right; display: block; -webkit-border-radius: 4px;
+}
+#selector .button {
+	border-width: 3px; width: 230px; font-size: 18px; margin-top: 32px;
+}
+#opishem {
+	text-align: center;
+}
+#opishem h2 {
+	margin-bottom: 70px;
+}
+#opishem li {
+	margin: 0px 50px 70px; width: 180px; font-size: 20px; vertical-align: top; display: inline-block;
+}
+#opishem li span {
+	font-size: 22px; font-weight: 800;
+}
+#opishem li::before {
+	background: url("../krafki/raabout.png") no-repeat; margin: 0px auto 20px; width: 80px; height: 80px; display: block; content: "";
+}
+#opishem li:nth-child(2)::before {
+	background-position: -80px 0px;
+}
+#opishem li:nth-child(3)::before {
+	background-position: -160px 0px;
+}
+#opishem li:nth-child(4)::before {
+	background-position: -240px 0px;
+}
+#opishem li:nth-child(5)::before {
+	background-position: -320px 0px;
+}
+#contacts {
+	background: url("../krafki/plenka-sochi-adres.jpg") no-repeat 50% 0px rgb(150, 173, 175); height: 580px;
+}
+#contacts ul {
+	background: url("../krafki/plenka-sochi-adres-fon.png"); margin: 0px auto; padding: 76px 40px 70px; width: 788px; border-radius: 15px; text-align: center; font-size: 18px; color: rgb(255, 255, 255);
+}
+#contacts li {
+	width: 30%; float: left;
+}
+#contacts li:nth-child(2) {
+	margin: 0px 5%;
+}
+#contacts h3 {
+	font-size: 20px; margin-bottom: 12px;
+}
+#contacts1 {
+	background: url("../krafki/plenka-omsk-adres.jpg") no-repeat 50% 0px rgb(150, 173, 175); height: 580px;
+}
+#contacts1 ul {
+	background: url("../krafki/plenka-sochi-adres-fon.png"); margin: 0px auto; padding: 76px 40px 70px; width: 788px; border-radius: 15px; text-align: center; font-size: 18px; color: rgb(255, 255, 255);
+}
+#contacts1 li {
+	width: 30%; float: left;
+}
+#contacts1 li:nth-child(2) {
+	margin: 0px 5%;
+}
+#contacts1 h3 {
+	font-size: 20px; margin-bottom: 12px;
+}
+
+#contacts2 {
+	background: url("../krafki/plenka-rostov-adres.jpg") no-repeat 50% 0px rgb(150, 173, 175); height: 580px;
+}
+#contacts2 ul {
+	background: url("../krafki/plenka-sochi-adres-fon.png"); margin: 0px auto; padding: 76px 40px 70px; width: 788px; border-radius: 15px; text-align: center; font-size: 18px; color: rgb(255, 255, 255);
+}
+#contacts2 li {
+	width: 30%; float: left;
+}
+#contacts2 li:nth-child(2) {
+	margin: 0px 5%;
+}
+#contacts2 h3 {
+	font-size: 20px; margin-bottom: 12px;
+}
+
+footer {
+	background: #76c3bd; padding: 30px 0px; color: #ffffff;
+}
+
+footer .spartak {
+	color: #ffffff; font-size: 13px; margin-top: 25px; float: right;
+}
+
+:focus {
+	
+}
+.modal-korab {
+	background: rgba(255, 255, 255, 0.75); left: 0px; top: 0px; width: 100%; height: 100%; text-align: center; overflow: auto; display: none; position: fixed; z-index: 1010; -webkit-transform-style: preserve-3d;
+}
+.modal-window {
+	left: 50%; top: 50%; position: fixed; z-index: 1500;
+}
+:not(.modal-form).modal-window {
+	transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%);
+}
+.modal-form.modal-window {
+	margin: -200px 0px 0px -220px; width: 440px; height: 400px;
+}
+#confirmation .modal-window {
+	background: rgb(51, 64, 73); padding: 20px; border-radius: 6px; width: 600px; color: rgb(255, 255, 255); line-height: 1.5; font-size: 24px; font-weight: bold; -webkit-border-radius: 6px;
+}
+.modal-close {
+	top: -38px; right: -38px; color: #33cccc; line-height: 0.6; font-size: 60px; position: absolute; cursor: pointer;
+}
+.modal-close:hover {
+	color: #339999;
+}
+:-ms-input-placeholder {
+	color: rgb(170, 170, 170);
+}
+:-ms-input-placeholder:focus {
+	color: rgb(204, 204, 204);
+}
+:-ms-input-placeholder.input-error {
+	color: rgb(221, 0, 0);
+}
+.input-error {
+	border-color: rgb(221, 0, 0); color: rgb(221, 0, 0);
+}
+div {
+	max-height: 9000px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%;
+}
+h1 {
+	max-height: 9000px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%;
+}
+h2 {
+	max-height: 9000px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%;
+}
+h3 {
+	max-height: 9000px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%;
+}
+p {
+	max-height: 9000px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%;
+}
+ul {
+	max-height: 9000px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%;
+}
+ol {
+	max-height: 9000px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%;
+}
+li {
+	max-height: 9000px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%;
+}
+dl {
+	max-height: 9000px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%;
+}
+span {
+	max-height: 9000px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%;
+}
+
+
+/* Стили для навигации */
+header nav ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	background-color: #333;
+	margin-bottom: 30px;
+}
+
+header nav ul li {
+	margin: 0;
+	padding: 0;
+}
+
+header nav ul li a {
+	display: block;
+	padding: 1em;
+	color: white;
+	text-decoration: none;
+}
+
+header nav ul li a:hover {
+	background-color: #575757;
+}
+
+/* Стили для основного контента */
+main {
+	padding: 1em;
+}
+
+/* Стили для продуктов */
+.product {
+	border: 1px solid #ccc;
+	padding: 1em;
+	margin: 1em 0;
+}
+
+.product h2 {
+	margin-top: 0;
+}
+
+/* Стили для корзины */
+#cart-items {
+	margin: 1em 0;
+}
+
+#checkout {
+	display: block;
+	padding: 1em;
+	background-color: #333;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+#checkout:hover {
+	background-color: #575757;
+}
+
+hr{
+	height: 2px;
+	background-color: #339999;
+	margin-top: 10px;
+}
+
+.product-catalog, .product-catalog-musor, .product-catalog-pvd{
+	border: 2px solid black;
+	margin-top: 20px;
+}
+.product-catalog ul li, .product-catalog-musor ul li, .product-catalog-pvd ul li{
+	margin-left: 20px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+#catalog{
+	height: 45px;
+}
+
+main h1{
+	font-size: 90px;
+}
+.product-catalog-musor ul li img{
+	width: 200px;
+	height: 150px;
+}
+
+.product-catalog-pvd ul li img{
+	width: 150px;
+	height: 120px;
+}
+h3{
+	margin-top: 10px;
+}
+#cart{
+	height: 45px;
+}
+#about{
+	height: 45px;
+}
