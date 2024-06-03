@@ -34,15 +34,16 @@
         </form>
     </main>
     <script>
-// Функция для загрузки товаров из корзины
+// Функция для загрузки товаров из корзины и отображения общей стоимости заказа
 function loadCartItems() {
     const cartItemsContainer = document.getElementById('cart-items');
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalPrice = calculateTotalPrice(cart);
 
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<p>Корзина пуста</p>';
     } else {
-        cartItemsContainer.innerHTML = '<ul>' + cart.map((item, index) => `
+        let itemsHTML = '<ul>' + cart.map((item, index) => `
             <li>
                 <h3>${item.name}</h3>
                 <p>Цена: ${item.price} рублей</p>
@@ -50,8 +51,11 @@ function loadCartItems() {
                 <button onclick="removeFromCart(${index})">Удалить</button>
             </li>
         `).join('') + '</ul>';
+        itemsHTML += `<p class='total_cost'>Общая стоимость заказа: ${totalPrice} рублей</p>`;
+        cartItemsContainer.innerHTML = itemsHTML;
     }
 }
+
 
 // Функция для удаления товара из корзины
 function removeFromCart(index) {
@@ -60,6 +64,16 @@ function removeFromCart(index) {
     localStorage.setItem('cart', JSON.stringify(cart));
     loadCartItems();
 }
+
+// Функция для вычисления общей стоимости товаров в корзине
+function calculateTotalPrice(cart) {
+    let totalPrice = 0;
+    for (const item of cart) {
+        totalPrice += parseFloat(item.price);
+    }
+    return totalPrice.toFixed(2); // Округляем до двух знаков после запятой
+}
+
 
 // Функция для обработки клика по кнопке "Оформить"
 function handleCheckoutClick() {

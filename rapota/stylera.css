@@ -947,3 +947,11 @@ h3{
 #about{
 	height: 45px;
 }
+
+.total_cost{
+	text-align: center;
+	font-weight: 800;
+	font-size: 20px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
