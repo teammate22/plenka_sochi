@@ -47,15 +47,50 @@ function loadCartItems() {
             <li>
                 <h3>${item.name}</h3>
                 <p>Цена: ${item.price} рублей</p>
-                <p>Размер: ${item.size}</p>
+                <label for="size-${index}">Размер:</label>
+                <select id="size-${index}" onchange="updateCartItemSize(${index}, this.value)">
+                    <option value="17мкм" ${item.size === '17мкм' ? 'selected' : ''}>17мкм</option>
+                    <option value="20мкм" ${item.size === '20мкм' ? 'selected' : ''}>20мкм</option>
+                    <option value="23мкм" ${item.size === '23мкм' ? 'selected' : ''}>23мкм</option>
+                    <option value="48x66мм" ${item.size === '23мкм' ? 'selected' : ''}>48x66мм</option>
+                    <option value="100м" ${item.size === '48x66мм' ? 'selected' : ''}>100м</option>
+                    <option value="120м" ${item.size === '120м' ? 'selected' : ''}>120м</option>
+                    <option value="180м" ${item.size === '180м' ? 'selected' : ''}>180м</option>
+                    <option value="12х06мм" ${item.size === '12х06мм' ? 'selected' : ''}>12х06мм</option>
+                    <option value="15х08мм" ${item.size === '15х08мм' ? 'selected' : ''}>15х08мм</option>
+                    <option value="19x25м" ${item.size === '19x25м' ? 'selected' : ''}>19x25м</option>
+                    <option value="48x20м" ${item.size === '48x20м' ? 'selected' : ''}>48x20м</option>
+                    <option value="48x50м" ${item.size === '48x50м' ? 'selected' : ''}>48x50м</option>
+                    <option value="30мкм" ${item.size === '30мкм' ? 'selected' : ''}>30мкм</option>
+                    <option value="35мкм" ${item.size === '35мкм' ? 'selected' : ''}>35мкм</option>
+                    <option value="40мкм" ${item.size === '40мкм' ? 'selected' : ''}>40мкм</option>
+                    <option value="45мкм" ${item.size === '45мкм' ? 'selected' : ''}>45мкм</option>
+                    <option value="1,20x50" ${item.size === '1,20x50' ? 'selected' : ''}>1,20x50</option>
+                    <option value="100м" ${item.size === '100м' ? 'selected' : ''}>100м</option>
+                    <option value="1,50x100м" ${item.size === '1,50x100м' ? 'selected' : ''}>1,50x100м</option>
+                    <option value="2 м.x50 м" ${item.size === '2 м.x50 м' ? 'selected' : ''}>2 м.x50 м</option>
+                    <option value="120 г/кв.м" ${item.size === '120 г/кв.м' ? 'selected' : ''}>120 г/кв.м</option>
+                    <option value="120x25м" ${item.size === '120x25м' ? 'selected' : ''}>120x25м</option>
+                    <option value="450*750 м" ${item.size === '450*750 м' ? 'selected' : ''}>450*750 м</option>
+                    <option value="300x100м" ${item.size === '300x100м' ? 'selected' : ''}>300x100м</option>
+                    <option value="250м" ${item.size === '250м' ? 'selected' : ''}>250м</option>
+                    <option value="450*250м" ${item.size === '450*250м' ? 'selected' : ''}>450*250м</option>
+                </select>
                 <button onclick="removeFromCart(${index})">Удалить</button>
             </li>
         `).join('') + '</ul>';
-        itemsHTML += `<p class='total_cost'>Общая стоимость заказа: ${totalPrice} рублей</p>`;
+        itemsHTML += `<p class="total_cost">Общая стоимость заказа: ${totalPrice} рублей</p>`;
         cartItemsContainer.innerHTML = itemsHTML;
     }
 }
 
+// Функция для обновления размера товара в корзине
+function updateCartItemSize(index, newSize) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart[index].size = newSize;
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCartItems();
+}
 
 // Функция для удаления товара из корзины
 function removeFromCart(index) {
